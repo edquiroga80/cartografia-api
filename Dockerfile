@@ -1,6 +1,6 @@
 # =============================================================================
 # CartografIA API — Dockerfile
-# Compatible con Railway, Render, Fly.io
+# Compatible con Render, Railway, Fly.io
 # =============================================================================
 
 FROM python:3.11-slim
@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libproj-dev \
     libgeos-dev \
     libspatialindex-dev \
-    libgl1-mesa-glx \
+    libgl1 \
+    libglx-mesa0 \
     libgomp1 \
     curl \
     && rm -rf /var/lib/apt/lists/*
